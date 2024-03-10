@@ -19,6 +19,6 @@
   }
 
   .typo-link {
-    @apply font-medium hover:underline;
+    @apply text-sm font-medium hover:underline;
   }
 }

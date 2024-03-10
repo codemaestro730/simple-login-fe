@@ -1,12 +1,12 @@
 import { HttpService } from './http.service';
-// import { LoginFormData } from '../pages/Auth/Login';
+import { LoginFormData } from '../pages/Auth/Login';
 import { RegisterFormData } from '../pages/Auth/Register';
 import { IUser } from '../resources/interfaces';
 
 export class AuthService {
-  // static login(data: LoginFormData): Promise<string> {
-  //   return HttpService.post('/login', data).then((res) => res.token);
-  // }
+  static login(data: LoginFormData): Promise<string> {
+    return HttpService.post('/auth/login', data);
+  }
 
   static register(data: RegisterFormData): Promise<string> {
     const { confirmPassword, ...formData } = data;

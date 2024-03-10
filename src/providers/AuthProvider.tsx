@@ -62,7 +62,6 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   }, [token]);
 
   const setToken = useCallback((token?: string) => {
-    console.log('-----', token);
     _setToken(token);
     setAccessToken(token);
     if (token) {
