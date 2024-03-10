@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { LoadingButton } from '@mui/lab';
-import { Alert, Button } from '@mui/material';
+import { Alert } from '@mui/material';
 import {
   EmailOutlined,
   PersonOutlined,
@@ -115,21 +115,22 @@ export const Register = () => {
       )}
 
       <div className="mt-6 flex justify-between">
-        <Link to="/login">
-          <Button type="button" color="primary" variant="outlined" size="large">
-            Back
-          </Button>
-        </Link>
-
         <LoadingButton
           color="primary"
           size="large"
           type="submit"
           variant="contained"
           loading={submitting}
+          fullWidth
         >
           Register
         </LoadingButton>
+      </div>
+
+      <div className="typo-link text-center">
+        <Link className="typo-link" to="/login">
+          Already registered? Back to Login
+        </Link>
       </div>
     </FormProvider>
   );

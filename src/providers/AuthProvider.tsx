@@ -62,7 +62,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   }, [token]);
 
   const setToken = useCallback((token?: string) => {
-    _setToken(token);
+    _setToken(token || '');
     setAccessToken(token);
     if (token) {
       localStorage.setItem(CONFIG.TOKEN_KEY, token);

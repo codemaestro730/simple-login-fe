@@ -103,7 +103,7 @@ export const Login = () => {
 
       <div className="typo-link text-center">
         <Link className="typo-link" to="/register">
-          Not registered yet?
+          Not registered yet? Goto to Register
         </Link>
       </div>
     </FormProvider>
